@@ -1,0 +1,9 @@
+---
+ - name: dynamic inventory 
+   hosts: web
+   become: true
+   tasks:
+           - name: copying content in myhosts file
+             copy:
+                     content: "It is working"
+                     dest: /etc/myhosts

@@ -1,0 +1,10 @@
+---
+- name: Copy a file to the document root directory on web host
+  hosts: web
+  tasks:
+    - name: Copy file to document root 
+      copy:
+        src: ./index.html  
+        dest: /var/www/html/index.html 
+      become: yes  
+

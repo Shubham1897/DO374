@@ -1,0 +1,3 @@
+content: "This is the content of the file."
+file: "example.txt"
+directory: "/tmp/example_dir"

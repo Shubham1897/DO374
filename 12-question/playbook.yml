@@ -1,0 +1,15 @@
+---
+ - name: adding variables and running it on testing host
+   hosts: web
+   vars_files:
+           - var.yml
+   tasks:
+           - name: Creating a directory using variable
+             file:
+                     path: "{{ directory }}"
+                     state: directory
+                     mode: '0755'
+           - name: Copying the content in file
+             copy:
+                     content: "{{ content }}"
+                     dest: "{{ directory }}/{{ file }}"
